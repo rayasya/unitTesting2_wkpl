@@ -1,18 +1,48 @@
-## Getting Started
+# Tugas Unit Testing WKPL menggunakan JUnit
+Tugas WKPL kali ini adalah melakukan unit testing menggunakan JUnit dengan studi kasus yang sederhana. pada tugas ini saya menggunakan studi kasus penggunaan kalkulator sederhana yaitu proses penjumlahan dan pengurangan.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Kode program pada file Calculator.java
+```java
+public class Calculator {
+    
+    public int add(int a, int b) {
+        return a + b;
+    }
 
-## Folder Structure
+    public int substract(int a, int b) {
+        return a - b;
+    }
+}
+```
 
-The workspace contains two folders by default, where:
+## Kode program pada file CalculatorTest.java
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+public class CalculatorTest {
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+    @Test
+    public void testAdd() {
+        Calculator calculator = new Calculator();
+        int result = calculator.add(5, 5);
+        assertEquals(10, result);
+    }
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+    @Test
+    public void testSubstract() {
+        Calculator calculator = new Calculator();
+        int result = calculator.substract(10, 5);
+        assertEquals(5, result);
+    }
+}
+```
 
-## Dependency Management
+Untuk outputnya sendiri nanti akan berupa pesan 'succes' atau 'fail' pada terminal testing, atau jika menggunakan JUnit pada VSCode maka akan keluar outputnya pada baris line code (jika ada kesalahan ekspektasi saat testing), namun jika berhasil maka akan keluar pada terminal testing dengan tanda centang hijau pada case yang diuji. contohnya seperti gamabar dibawah ini
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Gagal Unit Testing
+![Screenshot 2023-11-03 142908](https://github.com/rayasya/unitTesting2_wkpl/assets/68797333/769ed89e-8d4d-45c6-8072-f68a027743d5)
+
+### Sukses Unit Testing
+![image](https://github.com/rayasya/unitTesting2_wkpl/assets/68797333/665c5e63-8e3c-48cf-98e8-6592a1339c72)
+

@@ -1,5 +1,5 @@
 # Tugas Unit Testing WKPL menggunakan JUnit
-Tugas WKPL kali ini adalah melakukan unit testing menggunakan JUnit dengan studi kasus yang sederhana. pada tugas ini saya menggunakan studi kasus penggunaan kalkulator sederhana yaitu proses penjumlahan dan pengurangan.
+Tugas WKPL kali ini adalah tentang melakukan unit testing menggunakan JUnit dengan studi kasus yang sederhana. pada tugas ini saya menggunakan studi kasus penggunaan kalkulator sederhana yaitu proses penjumlahan dan pengurangan.
 
 ## Kode program pada file Calculator.java
 ```java
